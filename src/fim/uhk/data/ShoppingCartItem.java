@@ -1,15 +1,19 @@
-package fim.uhk;
+package fim.uhk.data;
 
 public class ShoppingCartItem {
     private String nazev;
-    private Double cenaZaKus;
-    private Double kusy;
+    private double cenaZaKus;
+    private double kusy;
 
-    public ShoppingCartItem(String nazev, Double cenaZaKus, Double kusy) {
+
+
+    public ShoppingCartItem(String nazev, double cenaZaKus, double kusy) {
         this.nazev = nazev;
         this.cenaZaKus = cenaZaKus;
         this.kusy = kusy;
     }
+
+
 
     public String getNazev() {
         return nazev;
@@ -33,5 +37,14 @@ public class ShoppingCartItem {
 
     public void setKusy(Double kusy) {
         this.kusy = kusy;
+    }
+
+    @Override
+    public String toString() {
+        return "ShoppingCartItem{" +
+                "nazev='" + nazev + '\'' +
+                ", cenaZaKus=" + cenaZaKus +
+                ", kusy=" + kusy +
+                '}';
     }
 }

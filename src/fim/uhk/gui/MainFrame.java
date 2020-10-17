@@ -1,7 +1,5 @@
 package fim.uhk.gui;
 
-import fim.uhk.ShoppingCartItem;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
