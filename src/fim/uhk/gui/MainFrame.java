@@ -89,16 +89,17 @@ public class MainFrame extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent actionEvent) {
         if (actionEvent.getSource() == btnInputAdd && validace()) {
             ShoppingCartItem newItem = new ShoppingCartItem(txtInputName.getText(), Double.parseDouble(txtInputPricePerPiece.getText()), (int) spInputPieces.getValue());
-
+            boolean isDuplicated = false;
             for(ShoppingCartItem item : shoppingCart.getItems()){
-                if(newItem.getNazev().equals(item.getNazev()) && newItem.getNazev().equalsIgnoreCase(item.getNazev())){
-
-                }else {
-
+                if(newItem.getCenaZaKus()==item.getCenaZaKus() && newItem.getNazev().equalsIgnoreCase(item.getNazev())){
+                    item.setKusy(item.getKusy() + newItem.getKusy());
+                    isDuplicated = true;
+                    break;
                 }
             }
-            shoppingCart.addItem(newItem);
-
+            if(!isDuplicated) {
+                shoppingCart.addItem(newItem);
+            }
             lblTotalPrice.setText("Celková cena: " + shoppingCart.getTotalPrice() + " KČ.");
             model.fireTableDataChanged();
             JOptionPane.showMessageDialog(mainFrame, "Položka přidána", "Úspěch", JOptionPane.INFORMATION_MESSAGE);

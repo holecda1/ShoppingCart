@@ -23,19 +23,19 @@ public class ShoppingCartItem {
         this.nazev = nazev;
     }
 
-    public Double getCenaZaKus() {
+    public double getCenaZaKus() {
         return cenaZaKus;
     }
 
-    public void setCenaZaKus(Double cenaZaKus) {
+    public void setCenaZaKus(double cenaZaKus) {
         this.cenaZaKus = cenaZaKus;
     }
 
-    public Double getKusy() {
+    public double getKusy() {
         return kusy;
     }
 
-    public void setKusy(Double kusy) {
+    public void setKusy(double kusy) {
         this.kusy = kusy;
     }
 

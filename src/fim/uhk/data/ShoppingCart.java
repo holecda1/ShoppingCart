@@ -16,6 +16,8 @@ public class ShoppingCart {
 
     public void addItem(ShoppingCartItem item){
         items.add(item);
+
+
     }
     public double getTotalPrice() {
         double totalPrice = 0;
