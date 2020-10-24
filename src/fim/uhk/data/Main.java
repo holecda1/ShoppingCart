@@ -22,9 +22,6 @@ public class Main {
      shp.addItem(new ShoppingCartItem("das", 20, 2));
      shp.addItem(new ShoppingCartItem("hfgd", 30, 1));
      shp.addItem(new ShoppingCartItem("ewq", 40, 3));
-
-    System.out.println(shp.getTotalPrice());
-
-
     }
+
 }

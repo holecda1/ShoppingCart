@@ -15,7 +15,6 @@ public class ShoppingCart {
     }
 
     public void addItem(ShoppingCartItem item){
-
         items.add(item);
     }
     public double getTotalPrice() {
@@ -27,4 +26,10 @@ public class ShoppingCart {
     }
 
 
-}
+        }
+
+
+
+
+
+
