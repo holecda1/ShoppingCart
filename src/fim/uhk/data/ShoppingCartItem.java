@@ -47,4 +47,8 @@ public class ShoppingCartItem {
                 ", kusy=" + kusy +
                 '}';
     }
+    public double getPrice(){
+        return  getKusy() * getCenaZaKus();
+    }
+
 }

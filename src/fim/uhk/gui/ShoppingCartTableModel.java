@@ -3,11 +3,14 @@ package fim.uhk.gui;
 import fim.uhk.data.ShoppingCart;
 import fim.uhk.data.ShoppingCartItem;
 
+
 import javax.swing.table.AbstractTableModel;
 
 public class ShoppingCartTableModel extends AbstractTableModel {
 
-    private ShoppingCart shoppingCart;
+   ShoppingCart shoppingCart;
+
+
 
     @Override
     public int getRowCount() {
@@ -30,7 +33,7 @@ public class ShoppingCartTableModel extends AbstractTableModel {
             case 2:
                 return item.getKusy();
             case 3:
-                return item.getKusy() * item.getCenaZaKus();
+                return item.getPrice();
             default:
                 return null;
         }
@@ -67,9 +70,13 @@ public class ShoppingCartTableModel extends AbstractTableModel {
         }
     }
 
+
+
     public void setShoppingCart(ShoppingCart shoppingCart) {
         this.shoppingCart = shoppingCart;
     }
+
+    public void refresh(){
+        fireTableDataChanged();
+    }
 }
-// stejný název + stejná cena tak aby se zvětšil kus o 1
-// podmínka pokud název + cena souhlasí zvětší se o 1

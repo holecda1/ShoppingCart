@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<shoppingCart>
+    <shoppingCartItem dateCrreate="2020-11-02">
+        <nazev>Telefon Samsung</nazev>
+        <cenaZaKus>9900</cenaZaKus>
+        <kusy>1</kusy>
+    </shoppingCartItem>
+    <shoppingCartItem>
+        <nazev>Notebook Lenovo</nazev>
+        <cenaZaKus>130000</cenaZaKus>
+        <kusy>3</kusy>
+    </shoppingCartItem>
+</shoppingCart>

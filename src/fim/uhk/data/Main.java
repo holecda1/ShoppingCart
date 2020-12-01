@@ -14,14 +14,12 @@ public class Main {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-            new MainFrame(800,600).setVisible(true);
+                MainFrame mainFrame = new MainFrame(800, 600);
+                mainFrame.setVisible(true);
+
+
             }
         });
-     ShoppingCart shp = new ShoppingCart();
-
-     shp.addItem(new ShoppingCartItem("das", 20, 2));
-     shp.addItem(new ShoppingCartItem("hfgd", 30, 1));
-     shp.addItem(new ShoppingCartItem("ewq", 40, 3));
     }
 
 }
